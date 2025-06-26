@@ -31,9 +31,9 @@ This project is a deep learning-based flower classification system trained on th
 
 | File Name | Description |
 |-----------|-------------|
-| `mobilenetv2_flowers17.keras` | Best performing lightweight model |
-| `cbam_resnet_flowers17.keras` | Custom ResNet50 model with CBAM block |
-| `resnet_flowers17.keras` | Standard ResNet50-based model |
+| `mobilenetv2_final_best.keras` | Best performing lightweight model |
+| `final_cbam_resnet17.keras` | Custom ResNet50 model with CBAM block |
+| `final_resnet_flowers17.keras` | Standard ResNet50-based model |
 | `labels.mat` | MATLAB file containing class labels |
 | `Untitled-1.ipynb` | Full training and evaluation notebook |
 
