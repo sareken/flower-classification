@@ -36,7 +36,6 @@ This project is a deep learning-based flower classification system trained on th
 | `resnet_flowers17.keras` | Standard ResNet50-based model |
 | `labels.mat` | MATLAB file containing class labels |
 | `Untitled-1.ipynb` | Full training and evaluation notebook |
-| `README.md` | This file |
 
 ---
 
