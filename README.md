@@ -1,55 +1,63 @@
 # flower-classification-cnn
-Bu proje, derin öğrenme tabanlı bir çiçek sınıflandırma sistemidir. Görüntü verileri, MobileNetV2 modeliyle eğitilmiş ve veri artırma teknikleriyle desteklenmiştir. Eğitim sürecinde en iyi başarıyı sağlayan model .keras formatında kaydedilmiş ve test sonuçları görsel olarak analiz edilmiştir.
 
-Özellikler
-    •    Transfer Learning yöntemiyle MobileNetV2 kullanılarak sınıflandırma yapılmıştır.
-    •    Eğitim ve doğrulama verileri üzerinde veri artırma uygulanmıştır.
-    •    Model, düzenli katman yapısı ve dropout ile overfitting’e karşı optimize edilmiştir.
-    •    Test sonuçları hem sayısal hem de görsel olarak değerlendirilmiştir.
+This project is a deep learning-based flower classification system trained on the Oxford 17 Category Flower Dataset. Various CNN architectures were tested, with MobileNetV2 providing the best balance of accuracy and performance. The models were trained using data augmentation and saved in `.keras` format. Final evaluation included both numeric metrics and visual analysis.
 
-Kullanılan Teknolojiler
-    •    Python
-    •    TensorFlow / Keras
-    •    MobileNetV2 (pre-trained)
-    •    Matplotlib, PIL
-    •    Pandas, NumPy
+---
 
-Proje Dosyaları
-Dosya Adı
-Açıklama
-mobilenetv2_final_best.keras
-Eğitilmiş modelin ağırlıkları
-Untitled-1.ipynb
-Eğitim, test ve değerlendirme kodlarını içeren Jupyter Notebook
-README.md
-Bu dosya
+## Features
 
-Eğitim Detayları
-    •    Model: MobileNetV2 (pre-trained, imagenet)
-    •    Giriş boyutu: 224x224x3
-    •    Optimizasyon: Adam (learning rate: 1e-4)
-    •    Kayıp fonksiyonu: Categorical Crossentropy
-    •    EarlyStopping: 7 epoch boyunca iyileşmeyen val_loss durumunda eğitim durdurulur
-    •    Kullanılan veri artırma teknikleri:
-    ◦    Dönme, kaydırma, yakınlaştırma, parlaklık değişimi, yatay çevirme
+- Image classification using MobileNetV2, ResNet50, and CBAM-enhanced ResNet50
+- Preprocessing with `ImageDataGenerator` and `flow_from_dataframe`
+- Extensive data augmentation applied during training
+- EarlyStopping and learning rate scheduling to prevent overfitting
+- Final models saved in `.keras` format
+- Visual and numerical evaluation of model performance
 
-Sonuç Görselleri
-Doğru tahmin edilen örnek görüntüler ve yanlış tahmin edilen örnek görüntüler analiz edilmiştir. Görseller GitHub deposuna dahil edilmiştir.
+---
 
-Nasıl Çalıştırılır
-# Gerekli kütüphanelerin kurulumu
-pip install tensorflow matplotlib pandas numpy pillow
+## Technologies Used
 
-# Jupyter Notebook ile çalıştırmak için
-jupyter notebook
-Not: Kodlar, train_df, val_df, test_df ve classes adlı değişkenlerin önceden tanımlandığını varsayar.
+- Python
+- TensorFlow / Keras
+- Pre-trained CNNs: MobileNetV2, ResNet50
+- CBAM attention module (custom layer)
+- Matplotlib, Seaborn
+- Pandas, NumPy
+- Scikit-learn
 
-Açıklamalar
-    •    Projede farklı modeller test edilmiş, en iyi sonuç MobileNetV2 modeliyle elde edilmiştir.
-    •    Eğitilmiş model ağırlıkları .keras formatında sunulmuştur.
-    •    Eğitim verileri DataFrame yapısında tanımlanmış ve flow_from_dataframe ile kullanılmıştır.
+---
 
-Geliştiren
-Bu proje, bireysel bir öğrenme ve uygulama çalışması olarak geliştirilmiştir. Eğitim amaçlıdır ve GitHub üzerinden erişilebilir durumdadır.
+## Files and Descriptions
 
+| File Name | Description |
+|-----------|-------------|
+| `mobilenetv2_flowers17.keras` | Best performing lightweight model |
+| `cbam_resnet_flowers17.keras` | Custom ResNet50 model with CBAM block |
+| `resnet_flowers17.keras` | Standard ResNet50-based model |
+| `labels.mat` | MATLAB file containing class labels |
+| `Untitled-1.ipynb` | Full training and evaluation notebook |
+| `README.md` | This file |
+
+---
+
+## Training Details
+
+- Input shape: `224x224x3`
+- Optimizer: Adam (learning rate = 1e-4)
+- Loss Function: Categorical Crossentropy
+- Callbacks: EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+- Epochs: Up to 40 with patience of 5
+- Batch size: 32
+- Data Split: 70% training, 15% validation, 15% test
+- Data augmentation:
+  - Rotation, shifting, zoom, brightness, horizontal flip
+
+---
+
+## How to Run
+
+Install the required libraries:
+
+```bash
+pip install tensorflow matplotlib pandas numpy pillow seaborn scipy
 
