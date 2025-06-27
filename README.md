@@ -60,3 +60,5 @@ Install the required libraries:
 pip install tensorflow matplotlib pandas numpy pillow seaborn scipy
 ```
 ![](images/karsilastirma.png)
+![](images/dogrutahmin.png)
+
