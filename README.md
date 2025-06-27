@@ -58,4 +58,5 @@ Install the required libraries:
 
 ```bash
 pip install tensorflow matplotlib pandas numpy pillow seaborn scipy
-
+```
+![Alternatif Açıklama](karsilastirma.jpg)
