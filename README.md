@@ -59,4 +59,4 @@ Install the required libraries:
 ```bash
 pip install tensorflow matplotlib pandas numpy pillow seaborn scipy
 ```
-![karsilastirma](images/karsilastirma.pnj)
+![](images/karsilastirma.png)
