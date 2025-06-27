@@ -65,4 +65,6 @@ pip install tensorflow matplotlib pandas numpy pillow seaborn scipy
 
 ![](images/yanlistahmin.png)
 
+![](images/matris.png)
+
 
